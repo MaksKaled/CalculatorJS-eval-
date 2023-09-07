@@ -9,8 +9,12 @@ buttons.map((button)=>{
                 display.innerText = '0';
                 break;
             case'=':
-            display.innerText=eval((display.innerText).replace('÷','/'))
+            let test = display.innerText
+            display.innerText=(eval(test.replace('÷','/')))
+            display.innerText=display.innerText.slice(0,10)
+            console.log(display.innerText)
             break;
+            
             case'%':
             let procent = display.innerText;
             display.innerText=eval(procent+'/100')
